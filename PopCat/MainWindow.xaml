@@ -6,5 +6,5 @@
         xmlns:local="clr-namespace:PopCat"
         mc:Ignorable="d"
         Title="Pop Cat" Height="500" Width="500" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="Black">
-    <Image x:Name="image" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/popcat1.png"></Image>
+    <Image x:Name="image" Stretch="Fill" Source="pack://siteoforigin:,,,/Resources/popcat1.png" RenderTransformOrigin="0.5,0.5"></Image>
 </Window>

@@ -30,6 +30,8 @@ namespace PopCat
             SoundPlayer pop = new SoundPlayer(Properties.Resources.pop);
             pop.LoadAsync();
 
+            bool flipped = false;
+
             MouseLeftButtonDown += (object sender, MouseButtonEventArgs args) =>
             {
                 image.Source = popcat2;
@@ -38,6 +40,16 @@ namespace PopCat
             MouseLeftButtonUp += (object sender, MouseButtonEventArgs args) =>
             {
                 image.Source = popcat1;
+            };
+            KeyDown += (object sender, KeyEventArgs args) =>
+            {
+                if (args.Key == Key.Space)
+                {
+                    flipped = !flipped;
+                    ScaleTransform transform = new ScaleTransform();
+                    transform.ScaleX = flipped ? -1 : 1;
+                    image.RenderTransform = transform;
+                }
             };
 
             image.Source = popcat1;
