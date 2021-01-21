@@ -89,22 +89,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\popcat1.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Resource Include="Resources\popcat1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\popcat2.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <Resource Include="Resources\popcat2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\pop.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="popcat1.png" />
+    <Resource Include="Resources\pop.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

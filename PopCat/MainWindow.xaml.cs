@@ -27,13 +27,12 @@ namespace PopCat
             ImageSource popcat1 = Imaging.CreateBitmapSourceFromHBitmap(Properties.Resources.popcat1.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
             ImageSource popcat2 = Imaging.CreateBitmapSourceFromHBitmap(Properties.Resources.popcat2.GetHbitmap(), IntPtr.Zero, Int32Rect.Empty, BitmapSizeOptions.FromEmptyOptions());
 
-            MediaPlayer pop = new MediaPlayer();
-            pop.Open(new Uri("pack://siteoforigin:,,,/Resources/pop.wav"));
+            SoundPlayer pop = new SoundPlayer(Properties.Resources.pop);
+            pop.LoadAsync();
 
             MouseLeftButtonDown += (object sender, MouseButtonEventArgs args) =>
             {
                 image.Source = popcat2;
-                pop.Position = TimeSpan.Zero;
                 pop.Play();
             };
             MouseLeftButtonUp += (object sender, MouseButtonEventArgs args) =>
