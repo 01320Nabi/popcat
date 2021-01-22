@@ -47,7 +47,11 @@ namespace PopCat
                     image.RenderTransform = transform;
                 }
             };
-            KeyUp += (object sender, KeyEventArgs args) => image.Source = popcat1;
+            KeyUp += (object sender, KeyEventArgs args) =>
+            {
+                if (args.Key == Key.Space)
+                    image.Source = popcat1;
+            };
 
             image.Source = popcat1;
         }
