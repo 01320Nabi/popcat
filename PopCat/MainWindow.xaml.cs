@@ -32,25 +32,27 @@ namespace PopCat
 
             bool flipped = false;
 
+            MouseLeftButtonDown += (object sender, MouseButtonEventArgs args) =>
+            {
+                image.Source = popcat2;
+                pop.Play();
+            };
+            MouseLeftButtonUp += (object sender, MouseButtonEventArgs args) =>
+            {
+                image.Source = popcat1;
+            };
+
             KeyDown += (object sender, KeyEventArgs args) =>
             {
                 if (args.Key == Key.Space)
                 {
-                    image.Source = popcat2;
-                    pop.Play();
-                }
-                else if(args.Key == Key.Enter)
-                {
                     flipped = !flipped;
-                    ScaleTransform transform = new ScaleTransform();
-                    transform.ScaleX = flipped ? -1 : 1;
+                    ScaleTransform transform = new ScaleTransform
+                    {
+                        ScaleX = flipped ? -1 : 1
+                    };
                     image.RenderTransform = transform;
                 }
-            };
-            KeyUp += (object sender, KeyEventArgs args) =>
-            {
-                if (args.Key == Key.Space)
-                    image.Source = popcat1;
             };
 
             image.Source = popcat1;
