@@ -97,5 +97,8 @@
   <ItemGroup>
     <Resource Include="Resources\pop.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\spinner.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
